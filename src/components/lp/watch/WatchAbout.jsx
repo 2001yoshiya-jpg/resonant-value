@@ -19,7 +19,7 @@ export default function WatchAbout() {
             </div>
             <h2 className="font-jp text-2xl md:text-3xl font-black text-navy leading-snug mb-4">
               ご自宅の不用な時計<br />
-              <span className="text-amber">くらの助</span>が出張買取
+              <span className="text-navy">くらの助</span>が出張買取
             </h2>
             <p className="text-muted-foreground font-jp text-sm leading-relaxed mb-6">
               「この時計、売れるかな？」「動かなくなったけど価値はある？」<br />
