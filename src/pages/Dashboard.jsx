@@ -3,26 +3,18 @@ import { ExternalLink, Pencil, Copy, Trash2 } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const pages = [
-  {
-    id: 1,
-    title: "楽器買取センター",
-    status: "公開中",
-    area: "全国",
-    slug: "/",
-    phone: "0120-XXX-XXX",
-    seo: "楽器の出張買取なら｜査定無料・即日対応",
-    href: "/",
-  },
-  {
-    id: 2,
-    title: "時計買取センター",
-    status: "公開中",
-    area: "全国",
-    slug: "/watch",
-    phone: "0120-XXX-XXX",
-    seo: "高級時計の出張買取｜査定無料・高価買取",
-    href: "/watch",
-  },
+  { id: 1, title: "楽器買取センター", status: "公開中", area: "全国", slug: "/", phone: "0120-XXX-XXX", seo: "楽器の出張買取なら｜査定無料・即日対応", href: "/" },
+  { id: 2, title: "時計買取センター", status: "公開中", area: "全国", slug: "/watch", phone: "0120-XXX-XXX", seo: "高級時計の出張買取｜査定無料・高価買取", href: "/watch" },
+  { id: 3, title: "ブランド品買取センター", status: "公開中", area: "全国", slug: "/brand", phone: "0120-XXX-XXX", seo: "ブランド品の出張買取｜査定無料・高価買取", href: "/brand" },
+  { id: 4, title: "金・プラチナ買取センター", status: "公開中", area: "全国", slug: "/gold", phone: "0120-XXX-XXX", seo: "金・プラチナの出張買取｜相場連動・高価買取", href: "/gold" },
+  { id: 5, title: "ジュエリー買取センター", status: "公開中", area: "全国", slug: "/jewelry", phone: "0120-XXX-XXX", seo: "ジュエリーの出張買取｜宝石鑑定士による査定", href: "/jewelry" },
+  { id: 6, title: "カメラ買取センター", status: "公開中", area: "全国", slug: "/camera", phone: "0120-XXX-XXX", seo: "カメラ・レンズの出張買取｜査定無料・高価買取", href: "/camera" },
+  { id: 7, title: "家電買取センター", status: "公開中", area: "全国", slug: "/appliance", phone: "0120-XXX-XXX", seo: "家電の出張買取｜査定無料・即日対応", href: "/appliance" },
+  { id: 8, title: "骨董品買取センター", status: "公開中", area: "全国", slug: "/antiques", phone: "0120-XXX-XXX", seo: "骨董品・古美術の出張買取｜専門鑑定士による査定", href: "/antiques" },
+  { id: 9, title: "切手・古銭買取センター", status: "公開中", area: "全国", slug: "/stamps", phone: "0120-XXX-XXX", seo: "切手・古銭の出張買取｜コレクション買取専門", href: "/stamps" },
+  { id: 10, title: "お酒買取センター", status: "公開中", area: "全国", slug: "/sake", phone: "0120-XXX-XXX", seo: "ウイスキー・ワインの出張買取｜高価買取", href: "/sake" },
+  { id: 11, title: "食器買取センター", status: "公開中", area: "全国", slug: "/dishes", phone: "0120-XXX-XXX", seo: "高級食器の出張買取｜マイセン・ウェッジウッド買取", href: "/dishes" },
+  { id: 12, title: "家具買取センター", status: "公開中", area: "全国", slug: "/furniture", phone: "0120-XXX-XXX", seo: "高級家具の出張買取｜ブランド家具買取専門", href: "/furniture" },
 ];
 
 export default function Dashboard() {

@@ -8,6 +8,16 @@ import UserNotRegisteredError from '@/components/UserNotRegisteredError';
 import Home from './pages/Home';
 import WatchLP from './pages/WatchLP';
 import Dashboard from './pages/Dashboard';
+import BrandLP from './pages/lp/BrandLP';
+import GoldLP from './pages/lp/GoldLP';
+import JewelryLP from './pages/lp/JewelryLP';
+import CameraLP from './pages/lp/CameraLP';
+import ApplianceLP from './pages/lp/ApplianceLP';
+import AntiquesLP from './pages/lp/AntiquesLP';
+import StampsLP from './pages/lp/StampsLP';
+import SakeLP from './pages/lp/SakeLP';
+import DishesLP from './pages/lp/DishesLP';
+import FurnitureLP from './pages/lp/FurnitureLP';
 // Add page imports here
 
 const AuthenticatedApp = () => {
@@ -39,6 +49,16 @@ const AuthenticatedApp = () => {
       <Route path="/" element={<Home />} />
       <Route path="/watch" element={<WatchLP />} />
       <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/brand" element={<BrandLP />} />
+      <Route path="/gold" element={<GoldLP />} />
+      <Route path="/jewelry" element={<JewelryLP />} />
+      <Route path="/camera" element={<CameraLP />} />
+      <Route path="/appliance" element={<ApplianceLP />} />
+      <Route path="/antiques" element={<AntiquesLP />} />
+      <Route path="/stamps" element={<StampsLP />} />
+      <Route path="/sake" element={<SakeLP />} />
+      <Route path="/dishes" element={<DishesLP />} />
+      <Route path="/furniture" element={<FurnitureLP />} />
       {/* Add your page Route elements here */}
       <Route path="*" element={<PageNotFound />} />
     </Routes>
