@@ -444,22 +444,23 @@ function SectionHeader({ en, ja, sub }) {
 /* ── Main Export ── */
 export default function CategoryLP({ config }) {
   return (
-    <div className="min-h-screen text-foreground font-jp">
+    <div className="min-h-screen text-foreground font-jp" style={{
+      backgroundImage: `linear-gradient(rgba(255,255,255,0.15), rgba(255,255,255,0.15)), url('https://media.base44.com/images/public/6a07fe0d9aa87ec73e08277b/811c6eb60_image.png')`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundAttachment: 'fixed'
+    }}>
       <TopNav config={config} />
       <div className="pt-16">
         <Hero config={config} />
-        <div style={{
-          backgroundImage: `linear-gradient(rgba(255,255,255,0.25), rgba(255,255,255,0.25)), url('https://media.base44.com/images/public/6a07fe0d9aa87ec73e08277b/82b118a91_image.png')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed'
-        }}>
-          <PriceGallery config={config} />
-          <ConditionSection config={config} />
-          <BrandsSection config={config} />
-          <CTASection config={config} />
-          <FooterSection config={config} />
-        </div>
+        <PriceGallery config={config} />
+        <ConditionSection config={config} />
+        <ReasonsSection config={config} />
+        <ProcessSection />
+        <BrandsSection config={config} />
+        <Testimonials config={config} />
+        <CTASection config={config} />
+        <FooterSection config={config} />
       </div>
       <StickyBar />
     </div>
