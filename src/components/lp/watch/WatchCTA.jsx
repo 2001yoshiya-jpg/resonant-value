@@ -19,7 +19,7 @@ export default function WatchCTA() {
             <div className="h-px w-12 bg-amber" />
           </div>
           <h2 className="font-jp text-2xl md:text-3xl font-black text-white">
-            「この時計、売れる？」だけでも<span className="text-amber">大丈夫です。</span>
+            「この時計、売れる？」だけでも<span className="text-white">大丈夫です。</span>
           </h2>
         </div>
 
@@ -88,7 +88,7 @@ export default function WatchCTA() {
                   <Label className="font-jp text-xs">メッセージ</Label>
                   <Textarea className="font-jp text-sm resize-none" rows={3} placeholder="状態や詳細をご記入ください" />
                 </div>
-                <Button type="submit" className="w-full h-12 bg-amber hover:bg-amber/90 text-navy font-jp font-black rounded text-base">
+                <Button type="submit" className="w-full h-12 bg-navy hover:bg-navy/90 text-white font-jp font-black rounded text-base">
                   無料査定を申し込む
                 </Button>
               </form>
