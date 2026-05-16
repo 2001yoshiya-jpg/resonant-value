@@ -53,5 +53,15 @@ const config = {
 };
 
 export default function GoldLP() {
-  return <CategoryLP config={config} />;
+  return (
+    <div style={{
+      backgroundImage: `linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)), url('https://media.base44.com/images/public/6a07fe0d9aa87ec73e08277b/811c6eb60_image.png')`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundAttachment: 'fixed',
+      minHeight: '100vh'
+    }}>
+      <CategoryLP config={config} />
+    </div>
+  );
 }
