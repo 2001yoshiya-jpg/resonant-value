@@ -1,4 +1,4 @@
-export default function WatchFooter() {
+export default function Footer() {
   return (
     <footer style={{ background: "#111", color: "#ccc", padding: "40px 6%", textAlign: "center" }}>
       <p className="font-bold text-white text-lg mb-4">買取 くらの助</p>
