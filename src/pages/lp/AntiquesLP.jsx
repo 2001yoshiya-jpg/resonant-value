@@ -5,6 +5,7 @@ const config = {
   brandName: "骨董品買取センター",
   itemName: "骨董品",
   itemPlaceholder: "例：伊万里焼、掛け軸、茶道具",
+  aboutImage: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=85",
   slides: [
     { image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1400&q=90", headline: "骨董品・古美術を", highlight: "高価買取", sub: "ご自宅へ出張査定いたします" },
     { image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1400&q=90", headline: "価値が分からなくても", highlight: "まずはご相談", sub: "専門鑑定士が正確に査定します" },

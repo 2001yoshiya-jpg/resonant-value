@@ -5,6 +5,7 @@ const config = {
   brandName: "切手・古銭買取センター",
   itemName: "切手・古銭",
   itemPlaceholder: "例：見返り美人切手、明治通宝",
+  aboutImage: "https://images.unsplash.com/photo-1579208570378-8c970854bc23?w=800&q=85",
   slides: [
     { image: "https://images.unsplash.com/photo-1579208570378-8c970854bc23?w=1400&q=90", headline: "切手・古銭を", highlight: "高価買取", sub: "ご自宅へ出張査定いたします" },
     { image: "https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?w=1400&q=90", headline: "コレクションを", highlight: "現金化しませんか", sub: "専門鑑定士が正確に査定します" },

@@ -5,6 +5,7 @@ const config = {
   brandName: "お酒買取センター",
   itemName: "お酒",
   itemPlaceholder: "例：山崎12年、ドンペリニヨン",
+  aboutImage: "https://images.unsplash.com/photo-1527281400683-1aae777175f8?w=800&q=85",
   slides: [
     { image: "https://images.unsplash.com/photo-1527281400683-1aae777175f8?w=1400&q=90", headline: "高級ウイスキー・ワインを", highlight: "高価買取", sub: "ご自宅へ出張査定いたします" },
     { image: "https://images.unsplash.com/photo-1567696153798-9111f9cd3d0d?w=1400&q=90", headline: "飲まないお酒を", highlight: "現金化しませんか", sub: "査定・出張費 完全無料" },

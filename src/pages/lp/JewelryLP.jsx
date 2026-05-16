@@ -5,6 +5,7 @@ const config = {
   brandName: "ジュエリー買取センター",
   itemName: "ジュエリー",
   itemPlaceholder: "例：ダイヤモンドリング、パールネックレス",
+  aboutImage: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=800&q=85",
   slides: [
     { image: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=1400&q=90", headline: "大切なジュエリーを", highlight: "高価買取", sub: "ご自宅へ出張査定いたします" },
     { image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=1400&q=90", headline: "ダイヤ・ルビー・サファイア", highlight: "適正価格で買取", sub: "宝石鑑定士が正確に査定します" },

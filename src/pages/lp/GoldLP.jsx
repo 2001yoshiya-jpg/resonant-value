@@ -5,6 +5,7 @@ const config = {
   brandName: "金・プラチナ買取センター",
   itemName: "金・プラチナ",
   itemPlaceholder: "例：18金ネックレス、プラチナリング",
+  aboutImage: "https://images.unsplash.com/photo-1610375461246-83df859d849d?w=800&q=85",
   slides: [
     { image: "https://images.unsplash.com/photo-1610375461246-83df859d849d?w=1400&q=90", headline: "金・プラチナを", highlight: "高価買取", sub: "ご自宅へ出張査定いたします" },
     { image: "https://images.unsplash.com/photo-1573408301185-9519f94de441?w=1400&q=90", headline: "使わないアクセサリー", highlight: "現金化しませんか", sub: "相場連動の最高価格で買い取ります" },

@@ -5,6 +5,7 @@ const config = {
   brandName: "家具買取センター",
   itemName: "家具",
   itemPlaceholder: "例：カリモク ソファ、Fritz Hansen チェア",
+  aboutImage: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=85",
   slides: [
     { image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1400&q=90", headline: "高級家具・ブランド家具を", highlight: "高価買取", sub: "ご自宅へ出張査定いたします" },
     { image: "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=1400&q=90", headline: "引越し・模様替えの", highlight: "不用品買取", sub: "査定・出張費 完全無料" },

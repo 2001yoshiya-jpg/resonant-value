@@ -5,6 +5,7 @@ const config = {
   brandName: "家電買取センター",
   itemName: "家電",
   itemPlaceholder: "例：ダイソン掃除機、ソニー BRAVIA",
+  aboutImage: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=85",
   slides: [
     { image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1400&q=90", headline: "家電製品を", highlight: "高価買取", sub: "ご自宅へ出張査定いたします" },
     { image: "https://images.unsplash.com/photo-1588508065123-287b28e013da?w=1400&q=90", headline: "引越し・買い替えの", highlight: "不用品買取", sub: "査定・出張費 完全無料" },

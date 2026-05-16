@@ -5,6 +5,7 @@ const config = {
   brandName: "食器買取センター",
   itemName: "食器",
   itemPlaceholder: "例：ウェッジウッド、マイセン",
+  aboutImage: "https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=800&q=85",
   slides: [
     { image: "https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=1400&q=90", headline: "高級食器・洋食器を", highlight: "高価買取", sub: "ご自宅へ出張査定いたします" },
     { image: "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=1400&q=90", headline: "使わない食器セットを", highlight: "現金化しませんか", sub: "査定・出張費 完全無料" },

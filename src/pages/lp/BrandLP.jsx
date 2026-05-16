@@ -5,6 +5,7 @@ const config = {
   brandName: "ブランド品買取センター",
   itemName: "ブランド品",
   itemPlaceholder: "例：ルイ・ヴィトン バッグ",
+  aboutImage: "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=800&q=85",
   slides: [
     { image: "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=1400&q=90", headline: "ブランド品を", highlight: "高価買取", sub: "ご自宅へ出張査定いたします" },
     { image: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=1400&q=90", headline: "使わないバッグ・財布", highlight: "現金化しませんか", sub: "査定・出張費 完全無料" },

@@ -5,6 +5,7 @@ const config = {
   brandName: "カメラ買取センター",
   itemName: "カメラ",
   itemPlaceholder: "例：ニコン D850、キヤノン EOS R5",
+  aboutImage: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800&q=85",
   slides: [
     { image: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=1400&q=90", headline: "カメラ・レンズを", highlight: "高価買取", sub: "ご自宅へ出張査定いたします" },
     { image: "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=1400&q=90", headline: "使わなくなった機材を", highlight: "現金化しませんか", sub: "査定・出張費 完全無料" },
