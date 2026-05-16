@@ -5,7 +5,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   const navLinks = [
-    { href: "https://zenith-peak-flow-enigmatic.base44.app/#items", label: "買取品目", external: true },
+    { href: "https://your-app.base44.app/#items", label: "買取品目", external: true },
     { href: "#reason", label: "選ばれる理由" },
     { href: "#flow", label: "買取の流れ" },
     { href: "#contact", label: "無料査定" },
