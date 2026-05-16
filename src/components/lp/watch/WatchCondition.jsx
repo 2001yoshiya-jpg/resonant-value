@@ -20,7 +20,7 @@ export default function WatchCondition() {
   return (
     <section className="py-20 px-6 bg-white">
       <div className="max-w-6xl mx-auto">
-        <SectionHeader en="Any Condition" ja={<>こんな状態のお品物でも<br /><span className="text-amber">出張買取</span>いたします</>} />
+        <SectionHeader en="Any Condition" ja={<>こんな状態のお品物でも<br /><span className="text-navy">出張買取</span>いたします</>} />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           {conditions.map((item, i) => (
             <motion.div key={item.title} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.12 }} className="text-center">
@@ -36,7 +36,7 @@ export default function WatchCondition() {
           <ul className="space-y-2">
             {examples.map((e) => (
               <li key={e} className="flex items-start gap-2">
-                <Check className="w-4 h-4 text-amber flex-shrink-0 mt-0.5" />
+                <Check className="w-4 h-4 text-navy flex-shrink-0 mt-0.5" />
                 <span className="font-jp text-sm text-foreground">{e}</span>
               </li>
             ))}
