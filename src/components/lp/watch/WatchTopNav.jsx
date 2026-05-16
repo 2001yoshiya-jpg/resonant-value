@@ -28,15 +28,8 @@ export default function WatchTopNav() {
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 bg-white transition-shadow duration-300 ${scrolled ? "shadow-md" : "shadow-sm"}`}>
       <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
-        <div className="flex items-center gap-2 flex-shrink-0">
-          <div className="w-10 h-10 bg-navy rounded-lg flex items-center justify-center flex-shrink-0">
-            <span className="text-white font-bold text-lg font-jp">蔵</span>
-          </div>
-          <div className="leading-tight">
-            <p className="text-[10px] text-muted-foreground font-jp tracking-widest">KURANOSUKE</p>
-            <p className="text-base font-black text-navy font-jp tracking-wide">くらの助</p>
-            <p className="text-[10px] text-muted-foreground font-jp">総合買取専門店</p>
-          </div>
+        <div className="flex items-center flex-shrink-0">
+          <img src="https://media.base44.com/images/public/6a07fe0d9aa87ec73e08277b/6cdcdf294_image.png" alt="くらの助" className="h-10 w-auto object-contain" />
         </div>
 
         <nav className="hidden lg:flex items-center gap-6">
