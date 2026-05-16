@@ -10,7 +10,7 @@ const categories = [
   { name: "カメラ", image: "https://media.base44.com/images/public/6a02b79e8a040050e4d74ca3/121579384_kamerajpg.jpg", href: "/camera" },
   { name: "家電", image: "https://media.base44.com/images/public/6a02b79e8a040050e4d74ca3/75203e49b_image.png", href: "/appliance" },
   { name: "骨董品", image: "https://media.base44.com/images/public/6a02b79e8a040050e4d74ca3/9f413df6f_kotoujpg.jpg", href: "/antiques" },
-  { name: "楽器", image: "https://media.base44.com/images/public/6a02b79e8a040050e4d74ca3/91cb6409c_image.png", href: "/" },
+  { name: "楽器", image: "https://media.base44.com/images/public/6a02b79e8a040050e4d74ca3/91cb6409c_image.png", href: "/instrument" },
   { name: "切手・古銭", image: "https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?w=300&q=80", href: "/stamps" },
   { name: "お酒", image: "https://media.base44.com/images/public/6a02b79e8a040050e4d74ca3/1bd4456d0_ske.jpg", href: "/sake" },
   { name: "食器", image: "https://media.base44.com/images/public/6a02b79e8a040050e4d74ca3/7e2b2324f_sara.jpg", href: "/dishes" },

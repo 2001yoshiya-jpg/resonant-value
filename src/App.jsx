@@ -18,6 +18,7 @@ import StampsLP from './pages/lp/StampsLP';
 import SakeLP from './pages/lp/SakeLP';
 import DishesLP from './pages/lp/DishesLP';
 import FurnitureLP from './pages/lp/FurnitureLP';
+import InstrumentLP from './pages/lp/InstrumentLP';
 // Add page imports here
 
 const AuthenticatedApp = () => {
@@ -59,6 +60,7 @@ const AuthenticatedApp = () => {
       <Route path="/sake" element={<SakeLP />} />
       <Route path="/dishes" element={<DishesLP />} />
       <Route path="/furniture" element={<FurnitureLP />} />
+      <Route path="/instrument" element={<InstrumentLP />} />
       {/* Add your page Route elements here */}
       <Route path="*" element={<PageNotFound />} />
     </Routes>
