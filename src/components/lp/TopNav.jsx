@@ -31,12 +31,13 @@ export default function TopNav() {
       <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center gap-2 flex-shrink-0">
-          <div className="w-8 h-8 bg-navy rounded flex items-center justify-center">
-            <span className="text-amber font-bold text-sm">楽</span>
+          <div className="w-10 h-10 bg-navy rounded-lg flex items-center justify-center flex-shrink-0">
+            <span className="text-white font-bold text-lg font-jp">蔵</span>
           </div>
           <div className="leading-tight">
-            <p className="text-xs text-muted-foreground font-jp">出張買取</p>
-            <p className="text-sm font-black text-navy font-jp tracking-wide">楽器買取センター</p>
+            <p className="text-[10px] text-muted-foreground font-jp tracking-widest">KURANOSUKE</p>
+            <p className="text-base font-black text-navy font-jp tracking-wide">くらの助</p>
+            <p className="text-[10px] text-muted-foreground font-jp">総合買取専門店</p>
           </div>
         </div>
 

@@ -25,12 +25,13 @@ function TopNav({ config }) {
     <header className={`fixed top-0 left-0 right-0 z-50 bg-white transition-shadow duration-300 ${scrolled ? "shadow-md" : "shadow-sm"}`}>
       <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
         <div className="flex items-center gap-2 flex-shrink-0">
-          <div className="w-8 h-8 bg-navy rounded flex items-center justify-center">
-            <span className="text-amber font-bold text-sm">{config.logoChar}</span>
+          <div className="w-10 h-10 bg-navy rounded-lg flex items-center justify-center flex-shrink-0">
+            <span className="text-white font-bold text-lg font-jp">蔵</span>
           </div>
           <div className="leading-tight">
-            <p className="text-xs text-muted-foreground font-jp">出張買取</p>
-            <p className="text-sm font-black text-navy font-jp tracking-wide">{config.brandName}</p>
+            <p className="text-[10px] text-muted-foreground font-jp tracking-widest">KURANOSUKE</p>
+            <p className="text-base font-black text-navy font-jp tracking-wide">くらの助</p>
+            <p className="text-[10px] text-muted-foreground font-jp">総合買取専門店</p>
           </div>
         </div>
         <nav className="hidden lg:flex items-center gap-6">
@@ -385,10 +386,13 @@ function FooterSection({ config }) {
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 mb-8 pb-8 border-b border-white/10">
           <div>
             <div className="flex items-center gap-2 mb-2">
-              <div className="w-7 h-7 bg-amber rounded flex items-center justify-center">
-                <span className="text-navy font-black text-xs">{config.logoChar}</span>
+              <div className="w-8 h-8 bg-navy rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-sm font-jp">蔵</span>
               </div>
-              <span className="font-jp font-black text-white text-base">{config.brandName}</span>
+              <div className="leading-tight">
+                <p className="text-[9px] text-white/60 font-jp tracking-widest">KURANOSUKE</p>
+                <p className="text-sm font-black text-white font-jp">くらの助</p>
+              </div>
             </div>
             <p className="font-jp text-white/60 text-xs">安心・丁寧・高価買取！査定は無料</p>
           </div>
