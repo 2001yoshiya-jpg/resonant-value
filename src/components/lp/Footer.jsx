@@ -1,36 +1,20 @@
-import { Phone, Mail } from "lucide-react";
-
 export default function Footer() {
   return (
-    <footer className="bg-foreground text-white py-10 px-6 pb-24">
-      <div className="max-w-6xl mx-auto">
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 mb-8 pb-8 border-b border-white/10">
-          <div>
-            <div className="flex items-center gap-2 mb-2">
-              <div className="w-7 h-7 bg-amber rounded flex items-center justify-center">
-                <span className="text-navy font-black text-xs">楽</span>
-              </div>
-              <span className="font-jp font-black text-white text-base">楽器買取センター</span>
-            </div>
-            <p className="font-jp text-white/60 text-xs leading-relaxed">
-              安心・丁寧・高価買取！査定は無料
-            </p>
-          </div>
-          <div className="flex flex-col sm:flex-row gap-4 text-sm">
-            <div className="flex items-center gap-2">
-              <Phone className="w-4 h-4 text-amber" />
-              <span className="font-mono font-bold">0120-XXX-XXX</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Mail className="w-4 h-4 text-amber" />
-              <span className="font-jp text-white/70 text-xs">24時間受付中</span>
-            </div>
-          </div>
-        </div>
-        <p className="font-jp text-white/40 text-xs text-center">
-          © {new Date().getFullYear()} 楽器買取センター All rights Reserved.
-        </p>
-      </div>
+    <footer style={{ background: "#111", color: "#ccc", padding: "40px 6%", textAlign: "center" }}>
+      <p className="font-bold text-white text-lg mb-4">買取 くらの助</p>
+      <p style={{ fontSize: 13, lineHeight: 2 }}>
+        【買取事業本部オフィス】〒292-0016 千葉県木更津市高砂１－９－１９<br />
+        古物商許可　埼玉公安委員会　第431360069254号
+      </p>
+      <p className="font-bold text-white mt-6 mb-2">拠点一覧</p>
+      <p style={{ fontSize: 13, lineHeight: 2 }}>
+        【事業会社本社】〒352-0011 埼玉県新座市野火止7-21-12<br />
+        水橋ビル2階　合同会社キューコネクト<br />
+        【練馬オフィス】〒178-0061 東京都練馬区大泉学園町7-19-17<br />
+        【神奈川リメイクセンター　家具家電】〒251-0037 藤沢市鵠沼海岸7-10-12<br />
+        【神奈川リメイクセンター　衣類】〒242-0002 神奈川県中郡大磯町生沢1035
+      </p>
+      <p style={{ fontSize: 12, marginTop: 24, color: "#888" }}>© 2026 買取 くらの助</p>
     </footer>
   );
 }
