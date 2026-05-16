@@ -66,7 +66,13 @@ function Hero({ config }) {
   }, [config.slides.length]);
   const scrollToContact = () => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
   return (
-    <section className="relative w-full overflow-hidden" style={{ minHeight: "90vh" }}>
+    <section className="relative w-full overflow-hidden" style={{
+      minHeight: "90vh",
+      backgroundImage: `linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)), url('https://media.base44.com/images/public/6a07fe0d9aa87ec73e08277b/811c6eb60_image.png')`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundAttachment: 'fixed'
+    }}>
       <AnimatePresence mode="wait">
         <motion.div key={current} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.8 }} className="absolute inset-0">
           <img src={config.slides[current].image} alt="hero" className="w-full h-full object-cover" />
