@@ -21,7 +21,7 @@ export default function WatchTestimonials() {
               <img src={t.image} alt={t.category} className="w-full h-36 object-cover" />
               <div className="p-5">
                 <div className="flex items-center justify-between mb-3">
-                  <span className="text-xs font-bold text-amber bg-amber/10 px-2 py-0.5 rounded font-jp">{t.category}</span>
+                  <span className="text-xs font-bold text-navy bg-navy/10 px-2 py-0.5 rounded font-jp">{t.category}</span>
                   <span className="text-xs text-muted-foreground font-jp">{t.location}</span>
                 </div>
                 <p className="font-jp text-sm text-foreground leading-relaxed mb-3">"{t.text}"</p>

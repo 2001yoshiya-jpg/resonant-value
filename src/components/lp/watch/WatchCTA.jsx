@@ -14,9 +14,9 @@ export default function WatchCTA() {
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-3 mb-3">
-            <div className="h-px w-12 bg-amber" />
-            <span className="text-amber text-xs font-bold tracking-widest uppercase">Free Consultation</span>
-            <div className="h-px w-12 bg-amber" />
+            <div className="h-px w-12 bg-white/40" />
+            <span className="text-white/80 text-xs font-bold tracking-widest uppercase">Free Consultation</span>
+            <div className="h-px w-12 bg-white/40" />
           </div>
           <h2 className="font-jp text-2xl md:text-3xl font-black text-white">
             「この時計、売れる？」だけでも<span className="text-white">大丈夫です。</span>
@@ -59,8 +59,8 @@ export default function WatchCTA() {
           <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="bg-white rounded-xl p-6">
             {submitted ? (
               <div className="flex flex-col items-center justify-center h-full py-12 text-center">
-                <div className="w-16 h-16 bg-amber/20 rounded-full flex items-center justify-center mb-4">
-                  <Send className="w-7 h-7 text-amber" />
+                <div className="w-16 h-16 bg-navy/20 rounded-full flex items-center justify-center mb-4">
+                  <Send className="w-7 h-7 text-navy" />
                 </div>
                 <p className="font-jp text-navy font-bold text-lg">お問い合わせありがとうございます</p>
                 <p className="font-jp text-sm text-muted-foreground mt-2">担当者よりご連絡いたします</p>

@@ -52,7 +52,7 @@ export default function WatchHero() {
 
       <div className="absolute bottom-32 left-1/2 -translate-x-1/2 z-10 flex gap-2">
         {slides.map((_, i) => (
-          <button key={i} onClick={() => setCurrent(i)} className={`h-2.5 rounded-full transition-all ${i === current ? "bg-amber w-6" : "bg-white/50 w-2.5"}`} />
+          <button key={i} onClick={() => setCurrent(i)} className={`h-2.5 rounded-full transition-all ${i === current ? "bg-navy w-6" : "bg-white/50 w-2.5"}`} />
         ))}
       </div>
 
@@ -62,7 +62,7 @@ export default function WatchHero() {
             <p className="text-muted-foreground text-sm font-jp mb-2">{slides[current].sub}</p>
             <h1 className="font-jp text-3xl md:text-5xl font-black text-navy leading-tight">
               {slides[current].headline}
-              <span className="text-amber">{slides[current].highlight}</span>
+              <span className="text-navy">{slides[current].highlight}</span>
             </h1>
           </motion.div>
         </AnimatePresence>
@@ -72,7 +72,7 @@ export default function WatchHero() {
         <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-white font-jp text-sm md:text-base font-bold text-center">
             時計買取センターは、リサイクル活動を通じて<br className="hidden md:block" />
-            積極的に<span className="text-amber font-black">SDG's</span>に取り組んでいます
+            積極的に<span className="text-white font-black">SDG's</span>に取り組んでいます
           </p>
           <div className="flex gap-3 flex-shrink-0">
             <Button className="h-11 px-5 bg-red-500 hover:bg-red-600 text-white font-jp font-bold rounded text-sm" onClick={scrollToContact}>

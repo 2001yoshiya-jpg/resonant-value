@@ -81,7 +81,7 @@ function Hero({ config }) {
       </button>
       <div className="absolute bottom-32 left-1/2 -translate-x-1/2 z-10 flex gap-2">
         {config.slides.map((_, i) => (
-          <button key={i} onClick={() => setCurrent(i)} className={`h-2.5 rounded-full transition-all ${i === current ? "bg-amber w-6" : "bg-white/50 w-2.5"}`} />
+          <button key={i} onClick={() => setCurrent(i)} className={`h-2.5 rounded-full transition-all ${i === current ? "bg-navy w-6" : "bg-white/50 w-2.5"}`} />
         ))}
       </div>
       <div className="relative z-10 flex items-center justify-center min-h-[90vh] px-4">
@@ -89,7 +89,7 @@ function Hero({ config }) {
           <motion.div key={current} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} transition={{ duration: 0.6, delay: 0.2 }} className="bg-white/90 backdrop-blur-sm rounded-lg px-8 md:px-16 py-8 text-center max-w-2xl shadow-2xl">
             <p className="text-muted-foreground text-sm font-jp mb-2">{config.slides[current].sub}</p>
             <h1 className="font-jp text-3xl md:text-5xl font-black text-navy leading-tight">
-              {config.slides[current].headline}<span className="text-amber">{config.slides[current].highlight}</span>
+              {config.slides[current].headline}<span className="text-navy">{config.slides[current].highlight}</span>
             </h1>
           </motion.div>
         </AnimatePresence>
@@ -97,7 +97,7 @@ function Hero({ config }) {
       <div className="absolute bottom-0 left-0 right-0 z-10 bg-navy/95 py-5 px-6">
         <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-white font-jp text-sm md:text-base font-bold text-center">
-            {config.brandName}は、リサイクル活動を通じて積極的に<span className="text-amber font-black">SDG's</span>に取り組んでいます
+            {config.brandName}は、リサイクル活動を通じて積極的に<span className="text-white font-black">SDG's</span>に取り組んでいます
           </p>
           <div className="flex gap-3 flex-shrink-0">
             <Button className="h-11 px-5 bg-red-500 hover:bg-red-600 text-white font-jp font-bold rounded text-sm" onClick={scrollToContact}><Phone className="w-4 h-4 mr-1.5" />電話で無料査定</Button>
@@ -115,13 +115,13 @@ function PriceGallery({ config }) {
   return (
     <section className="py-20 px-6 bg-muted" id="items">
       <div className="max-w-7xl mx-auto">
-        <SectionHeader en="Recent Valuations" ja={<>相場買取価格よりも<br /><span className="text-amber">こんなに高く</span>買い取ります！</>} />
+        <SectionHeader en="Recent Valuations" ja={<>相場買取価格よりも<br /><span className="text-navy">こんなに高く</span>買い取ります！</>} />
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {config.items.map((item, i) => (
             <motion.div key={item.name} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.07 }} className="item-card bg-white rounded-xl overflow-hidden shadow-sm border border-border">
               <div className="relative">
                 <img src={item.image} alt={item.name} className="w-full aspect-[4/3] object-cover" />
-                <div className="absolute top-2 right-2 bg-amber text-navy text-xs font-black px-2 py-0.5 rounded">30%増額</div>
+                <div className="absolute top-2 right-2 bg-navy text-white text-xs font-black px-2 py-0.5 rounded">30%増額</div>
               </div>
               <div className="p-4">
                 <p className="font-jp text-xs font-semibold text-foreground leading-snug mb-3 line-clamp-2">{item.name}</p>
@@ -130,8 +130,8 @@ function PriceGallery({ config }) {
                     <span className="text-xs text-muted-foreground font-jp">相場</span>
                     <span className="text-xs text-muted-foreground line-through font-mono">¥{fmt(item.market)}</span>
                   </div>
-                  <div className="flex items-center justify-between bg-amber/10 rounded px-2 py-1">
-                    <span className="text-xs text-amber font-jp font-bold">買取価格</span>
+                  <div className="flex items-center justify-between bg-navy/10 rounded px-2 py-1">
+                    <span className="text-xs text-navy font-jp font-bold">買取価格</span>
                     <span className="text-sm font-black text-navy font-mono">¥{fmt(item.ours)}</span>
                   </div>
                 </div>
@@ -149,7 +149,7 @@ function ConditionSection({ config }) {
   return (
     <section className="py-20 px-6 bg-white">
       <div className="max-w-6xl mx-auto">
-        <SectionHeader en="Any Condition" ja={<>こんな状態のお品物でも<br /><span className="text-amber">出張買取</span>いたします</>} />
+        <SectionHeader en="Any Condition" ja={<>こんな状態のお品物でも<br /><span className="text-navy">出張買取</span>いたします</>} />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           {config.conditions.map((item, i) => (
             <motion.div key={item.title} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.12 }} className="text-center">
@@ -165,7 +165,7 @@ function ConditionSection({ config }) {
           <ul className="space-y-2">
             {config.conditionExamples.map(e => (
               <li key={e} className="flex items-start gap-2">
-                <Check className="w-4 h-4 text-amber flex-shrink-0 mt-0.5" />
+                <Check className="w-4 h-4 text-navy flex-shrink-0 mt-0.5" />
                 <span className="font-jp text-sm text-foreground">{e}</span>
               </li>
             ))}
@@ -181,7 +181,7 @@ function ReasonsSection({ config }) {
   return (
     <section className="py-20 px-6 bg-muted" id="reasons">
       <div className="max-w-6xl mx-auto">
-        <SectionHeader en="Why Choose Us" ja={<>{config.brandName}が<span className="text-amber">選ばれる5つの理由</span></>} />
+        <SectionHeader en="Why Choose Us" ja={<>{config.brandName}が<span className="text-navy">選ばれる5つの理由</span></>} />
         <div className="space-y-6">
           {config.reasons.map((r, i) => (
             <motion.div key={r.num} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.08 }} className={`flex flex-col md:flex-row items-center gap-6 bg-white rounded-xl shadow-sm p-6 border border-border ${i % 2 === 1 ? "md:flex-row-reverse" : ""}`}>
@@ -190,7 +190,7 @@ function ReasonsSection({ config }) {
               </div>
               <div className="flex-1">
                 <div className="flex items-center gap-3 mb-2">
-                  <span className="text-3xl font-black text-amber font-mono">{r.num}</span>
+                  <span className="text-3xl font-black text-navy font-mono">{r.num}</span>
                   <h3 className="font-jp text-lg font-black text-navy">{r.title}</h3>
                 </div>
                 <p className="font-jp text-sm text-muted-foreground leading-relaxed">{r.desc}</p>
@@ -214,16 +214,16 @@ function ProcessSection() {
   return (
     <section className="py-20 px-6 bg-white" id="flow">
       <div className="max-w-6xl mx-auto">
-        <SectionHeader en="How It Works" ja={<>買取の<span className="text-amber">流れ</span></>} />
+        <SectionHeader en="How It Works" ja={<>買取の<span className="text-navy">流れ</span></>} />
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           {processSteps.map((step, i) => (
             <motion.div key={step.num} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }} className="relative">
-              {i < processSteps.length - 1 && <div className="hidden md:block absolute top-16 left-[85%] text-amber text-2xl z-10 font-black">›</div>}
+              {i < processSteps.length - 1 && <div className="hidden md:block absolute top-16 left-[85%] text-navy text-2xl z-10 font-black">›</div>}
               <div className="bg-muted rounded-xl overflow-hidden shadow-sm border border-border">
                 <img src={step.image} alt={step.title} className="w-full h-36 object-cover" />
                 <div className="p-5">
                   <div className="flex items-center gap-2 mb-2">
-                    <span className="text-2xl font-black text-amber font-mono">{step.num}</span>
+                    <span className="text-2xl font-black text-navy font-mono">{step.num}</span>
                     <h3 className="font-jp text-sm font-black text-navy">{step.title}</h3>
                   </div>
                   <p className="font-jp text-xs text-muted-foreground leading-relaxed">{step.desc}</p>
@@ -269,7 +269,7 @@ function BrandsSection({ config }) {
   return (
     <section className="py-20 px-6 bg-muted">
       <div className="max-w-6xl mx-auto">
-        <SectionHeader en="Brands" ja={<>取り扱い<span className="text-amber">メーカー</span>・ブランド</>} sub="掲載のないブランドも査定可能です。お気軽にご相談ください。" />
+        <SectionHeader en="Brands" ja={<>取り扱い<span className="text-navy">メーカー</span>・ブランド</>} sub="掲載のないブランドも査定可能です。お気軽にご相談ください。" />
         <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-8 gap-3">
           {config.brands.map((brand, i) => (
             <BrandCard key={typeof brand === "string" ? brand : brand.name} brand={brand} i={i} />
@@ -292,7 +292,7 @@ function Testimonials({ config }) {
               <img src={t.image} alt={t.category} className="w-full h-36 object-cover" />
               <div className="p-5">
                 <div className="flex items-center justify-between mb-3">
-                  <span className="text-xs font-bold text-amber bg-amber/10 px-2 py-0.5 rounded font-jp">{t.category}</span>
+                  <span className="text-xs font-bold text-navy bg-navy/10 px-2 py-0.5 rounded font-jp">{t.category}</span>
                   <span className="text-xs text-muted-foreground font-jp">{t.location}</span>
                 </div>
                 <p className="font-jp text-sm text-foreground leading-relaxed mb-3">"{t.text}"</p>
@@ -314,11 +314,11 @@ function CTASection({ config }) {
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-3 mb-3">
-            <div className="h-px w-12 bg-amber" />
-            <span className="text-amber text-xs font-bold tracking-widest uppercase">Free Consultation</span>
-            <div className="h-px w-12 bg-amber" />
+            <div className="h-px w-12 bg-white/40" />
+            <span className="text-white/80 text-xs font-bold tracking-widest uppercase">Free Consultation</span>
+            <div className="h-px w-12 bg-white/40" />
           </div>
-          <h2 className="font-jp text-2xl md:text-3xl font-black text-white">「この{config.itemName}、売れる？」だけでも<span className="text-amber">大丈夫です。</span></h2>
+          <h2 className="font-jp text-2xl md:text-3xl font-black text-white">「この{config.itemName}、売れる？」だけでも<span className="text-white">大丈夫です。</span></h2>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div className="space-y-6">
@@ -347,7 +347,7 @@ function CTASection({ config }) {
           <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="bg-white rounded-xl p-6">
             {submitted ? (
               <div className="flex flex-col items-center justify-center h-full py-12 text-center">
-                <div className="w-16 h-16 bg-amber/20 rounded-full flex items-center justify-center mb-4"><Send className="w-7 h-7 text-amber" /></div>
+                <div className="w-16 h-16 bg-navy/20 rounded-full flex items-center justify-center mb-4"><Send className="w-7 h-7 text-navy" /></div>
                 <p className="font-jp text-navy font-bold text-lg">お問い合わせありがとうございます</p>
                 <p className="font-jp text-sm text-muted-foreground mt-2">担当者よりご連絡いたします</p>
               </div>
@@ -359,7 +359,7 @@ function CTASection({ config }) {
                 <div className="space-y-1"><Label className="font-jp text-xs">メールアドレス <span className="text-red-500">*</span></Label><Input type="email" className="h-10 font-jp text-sm" placeholder="example@mail.com" required /></div>
                 <div className="space-y-1"><Label className="font-jp text-xs">査定希望品</Label><Input className="h-10 font-jp text-sm" placeholder={config.itemPlaceholder} /></div>
                 <div className="space-y-1"><Label className="font-jp text-xs">メッセージ</Label><Textarea className="font-jp text-sm resize-none" rows={3} placeholder="状態や詳細をご記入ください" /></div>
-                <Button type="submit" className="w-full h-12 bg-amber hover:bg-amber/90 text-navy font-jp font-black rounded text-base">無料査定を申し込む</Button>
+                <Button type="submit" className="w-full h-12 bg-navy hover:bg-navy/90 text-white font-jp font-black rounded text-base">無料査定を申し込む</Button>
               </form>
             )}
           </motion.div>
@@ -382,8 +382,8 @@ function FooterSection({ config }) {
             <p className="font-jp text-white/60 text-xs">安心・丁寧・高価買取！査定は無料</p>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 text-sm">
-            <div className="flex items-center gap-2"><Phone className="w-4 h-4 text-amber" /><span className="font-mono font-bold">0120-XXX-XXX</span></div>
-            <div className="flex items-center gap-2"><Mail className="w-4 h-4 text-amber" /><span className="font-jp text-white/70 text-xs">24時間受付中</span></div>
+            <div className="flex items-center gap-2"><Phone className="w-4 h-4 text-white" /><span className="font-mono font-bold">0120-XXX-XXX</span></div>
+            <div className="flex items-center gap-2"><Mail className="w-4 h-4 text-white" /><span className="font-jp text-white/70 text-xs">24時間受付中</span></div>
           </div>
         </div>
         <p className="font-jp text-white/40 text-xs text-center">© {new Date().getFullYear()} {config.brandName} All rights Reserved.</p>
@@ -426,9 +426,9 @@ function SectionHeader({ en, ja, sub }) {
   return (
     <div className="text-center mb-12">
       <div className="flex items-center justify-center gap-3 mb-2">
-        <div className="h-px w-12 bg-amber" />
-        <span className="text-amber text-xs font-bold tracking-widest uppercase">{en}</span>
-        <div className="h-px w-12 bg-amber" />
+        <div className="h-px w-12 bg-navy" />
+        <span className="text-navy text-xs font-bold tracking-widest uppercase">{en}</span>
+        <div className="h-px w-12 bg-navy" />
       </div>
       <h2 className="font-jp text-2xl md:text-3xl font-black text-navy leading-snug">{ja}</h2>
       {sub && <p className="font-jp text-sm text-muted-foreground mt-3">{sub}</p>}

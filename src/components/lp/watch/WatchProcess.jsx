@@ -12,18 +12,18 @@ export default function WatchProcess() {
   return (
     <section className="py-20 px-6 bg-white" id="flow">
       <div className="max-w-6xl mx-auto">
-        <SectionHeader en="How It Works" ja={<>買取の<span className="text-amber">流れ</span></>} />
+        <SectionHeader en="How It Works" ja={<>買取の<span className="text-navy">流れ</span></>} />
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           {steps.map((step, i) => (
             <motion.div key={step.num} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }} className="relative">
               {i < steps.length - 1 && (
-                <div className="hidden md:block absolute top-16 left-[85%] text-amber text-2xl z-10 font-black">›</div>
+                <div className="hidden md:block absolute top-16 left-[85%] text-navy text-2xl z-10 font-black">›</div>
               )}
               <div className="bg-muted rounded-xl overflow-hidden shadow-sm border border-border">
                 <img src={step.image} alt={step.title} className="w-full h-36 object-cover" />
                 <div className="p-5">
                   <div className="flex items-center gap-2 mb-2">
-                    <span className="text-2xl font-black text-amber font-mono">{step.num}</span>
+                    <span className="text-2xl font-black text-navy font-mono">{step.num}</span>
                     <h3 className="font-jp text-sm font-black text-navy">{step.title}</h3>
                   </div>
                   <p className="font-jp text-xs text-muted-foreground leading-relaxed">{step.desc}</p>

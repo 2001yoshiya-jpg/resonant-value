@@ -13,7 +13,7 @@ export default function WatchReasons() {
   return (
     <section className="py-20 px-6 bg-muted" id="reasons">
       <div className="max-w-6xl mx-auto">
-        <SectionHeader en="Why Choose Us" ja={<>時計買取センターが<span className="text-amber">選ばれる5つの理由</span></>} sub="安心・丁寧・高価買取を徹底しています" />
+        <SectionHeader en="Why Choose Us" ja={<>時計買取センターが<span className="text-navy">選ばれる5つの理由</span></>} sub="安心・丁寧・高価買取を徹底しています" />
         <div className="space-y-6">
           {reasons.map((r, i) => (
             <motion.div key={r.num} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.08 }} className={`flex flex-col md:flex-row items-center gap-6 bg-white rounded-xl shadow-sm p-6 border border-border ${i % 2 === 1 ? "md:flex-row-reverse" : ""}`}>
@@ -22,7 +22,7 @@ export default function WatchReasons() {
               </div>
               <div className="flex-1">
                 <div className="flex items-center gap-3 mb-2">
-                  <span className="text-3xl font-black text-amber font-mono">{r.num}</span>
+                  <span className="text-3xl font-black text-navy font-mono">{r.num}</span>
                   <h3 className="font-jp text-lg font-black text-navy">{r.title}</h3>
                 </div>
                 <p className="font-jp text-sm text-muted-foreground leading-relaxed">{r.desc}</p>
