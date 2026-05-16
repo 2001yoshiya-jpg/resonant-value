@@ -41,7 +41,7 @@ export default function Dashboard() {
       <div className="bg-white border-b border-border px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <div className="w-7 h-7 bg-navy rounded flex items-center justify-center">
-            <span className="text-amber font-black text-xs">楽</span>
+            <span className="text-white font-black text-xs">楽</span>
           </div>
           <span className="font-black text-navy text-base">LP管理ダッシュボード</span>
         </div>
