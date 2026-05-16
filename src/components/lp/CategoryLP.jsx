@@ -447,11 +447,18 @@ export default function CategoryLP({ config }) {
       <TopNav config={config} />
       <div className="pt-16">
         <Hero config={config} />
-        <PriceGallery config={config} />
-        <ConditionSection config={config} />
-        <BrandsSection config={config} />
-        <CTASection config={config} />
-        <FooterSection config={config} />
+        <div style={{
+          backgroundImage: `linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)), url('https://media.base44.com/images/public/6a07fe0d9aa87ec73e08277b/811c6eb60_image.png')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed'
+        }}>
+          <PriceGallery config={config} />
+          <ConditionSection config={config} />
+          <BrandsSection config={config} />
+          <CTASection config={config} />
+          <FooterSection config={config} />
+        </div>
       </div>
       <StickyBar />
     </div>
