@@ -20,7 +20,7 @@ export default function WatchPriceGallery() {
       <div className="max-w-7xl mx-auto">
         <SectionHeader
           en="Recent Valuations"
-          ja={<>相場買取価格よりも<br /><span className="text-amber">こんなに高く</span>買い取ります！</>}
+          ja={<>相場買取価格よりも<br /><span className="text-navy">こんなに高く</span>買い取ります！</>}
           sub="独自のルートで他社より高く買い取れる体制を整えています"
         />
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -28,7 +28,7 @@ export default function WatchPriceGallery() {
             <motion.div key={item.name} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.07 }} className="item-card bg-white rounded-xl overflow-hidden shadow-sm border border-border">
               <div className="relative">
                 <img src={item.image} alt={item.name} className="w-full aspect-[4/3] object-cover" />
-                <div className="absolute top-2 right-2 bg-amber text-navy text-xs font-black px-2 py-0.5 rounded">30%増額</div>
+                <div className="absolute top-2 right-2 bg-navy text-white text-xs font-black px-2 py-0.5 rounded">30%増額</div>
               </div>
               <div className="p-4">
                 <p className="font-jp text-xs font-semibold text-foreground leading-snug mb-3 line-clamp-2">{item.name}</p>
@@ -37,8 +37,8 @@ export default function WatchPriceGallery() {
                     <span className="text-xs text-muted-foreground font-jp">相場</span>
                     <span className="text-xs text-muted-foreground line-through font-mono">¥{fmt(item.market)}</span>
                   </div>
-                  <div className="flex items-center justify-between bg-amber/10 rounded px-2 py-1">
-                    <span className="text-xs text-amber font-jp font-bold">買取価格</span>
+                  <div className="flex items-center justify-between bg-navy/10 rounded px-2 py-1">
+                    <span className="text-xs text-navy font-jp font-bold">買取価格</span>
                     <span className="text-sm font-black text-navy font-mono">¥{fmt(item.ours)}</span>
                   </div>
                 </div>
