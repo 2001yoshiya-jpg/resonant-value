@@ -249,8 +249,7 @@ function ProcessSection() {
 function BrandCard({ brand, i }) {
   const [imgError, setImgError] = useState(false);
   const name = typeof brand === "string" ? brand : brand.name;
-  const domain = typeof brand === "object" && brand.domain ? brand.domain : null;
-  const logoUrl = domain ? `https://www.google.com/s2/favicons?domain=${domain}&sz=64` : null;
+  const logo = typeof brand === "object" && brand.logo ? brand.logo : null;
 
   return (
     <motion.div
@@ -258,18 +257,15 @@ function BrandCard({ brand, i }) {
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.3, delay: i * 0.03 }}
-      className="item-card bg-white rounded-xl border border-border h-20 flex flex-col items-center justify-center px-2 py-2 shadow-sm gap-1"
+      className="item-card bg-white rounded-xl border border-border flex flex-col items-center justify-center gap-2 p-3 shadow-sm aspect-square"
     >
-      {logoUrl && !imgError ? (
-        <>
-          <img
-            src={logoUrl}
-            alt={name}
-            className="h-8 w-8 object-contain"
-            onError={() => setImgError(true)}
-          />
-          <span className="font-jp text-[10px] text-muted-foreground text-center leading-tight">{name}</span>
-        </>
+      {logo && !imgError ? (
+        <img
+          src={logo}
+          alt={name}
+          className="w-full h-12 object-contain"
+          onError={() => setImgError(true)}
+        />
       ) : (
         <span className="font-jp text-xs font-bold text-navy text-center leading-tight px-1">{name}</span>
       )}
