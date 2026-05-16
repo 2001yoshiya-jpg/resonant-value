@@ -13,7 +13,13 @@ import { Label } from "@/components/ui/label";
 /* ── TopNav ── */
 function TopNav({ config }) {
   const [open, setOpen] = useState(false);
-  const navLinks = [{ href: "items", label: "買取品目" }, { href: "reasons", label: "選ばれる理由" }, { href: "flow", label: "買取の流れ" }, { href: "contact", label: "無料査定" }];
+  const navLinks = [
+    { href: "items", label: "買取品目" },
+    { href: "reasons", label: "選ばれる理由" },
+    { href: "flow", label: "買取の流れ" },
+    { href: "contact", label: "無料査定" },
+    { href: "about", label: "会社概要" },
+  ];
   const scrollTo = (id) => { setOpen(false); document.getElementById(id)?.scrollIntoView({ behavior: "smooth" }); };
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm" style={{ boxShadow: "0 1px 6px rgba(0,0,0,0.06)" }}>
@@ -66,13 +72,7 @@ function Hero({ config }) {
   }, [config.slides.length]);
   const scrollToContact = () => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
   return (
-    <section className="relative w-full overflow-hidden" style={{
-      minHeight: "90vh",
-      backgroundImage: `linear-gradient(rgba(255,255,255,0.25), rgba(255,255,255,0.25)), url('https://media.base44.com/images/public/6a07fe0d9aa87ec73e08277b/82b118a91_image.png')`,
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      backgroundAttachment: 'fixed'
-    }}>
+    <section className="relative w-full overflow-hidden" style={{ minHeight: "90vh" }}>
       <AnimatePresence mode="wait">
         <motion.div key={current} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.8 }} className="absolute inset-0">
           <img src={config.slides[current].image} alt="hero" className="w-full h-full object-cover" />
@@ -109,6 +109,62 @@ function Hero({ config }) {
             <Button className="h-11 px-5 bg-red-500 hover:bg-red-600 text-white font-jp font-bold rounded text-sm" onClick={scrollToContact}><Phone className="w-4 h-4 mr-1.5" />電話で無料査定</Button>
             <Button className="h-11 px-5 bg-green-500 hover:bg-green-600 text-white font-jp font-bold rounded text-sm" onClick={scrollToContact}><Mail className="w-4 h-4 mr-1.5" />メールで相談する</Button>
           </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ── About ── */
+const aboutPoints = ["査定無料", "出張費無料", "キャンセル無料", "即日対応"];
+
+function AboutSection({ config }) {
+  const scrollToContact = () => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+  return (
+    <section className="py-20 px-6 bg-white" id="about">
+      <div className="max-w-6xl mx-auto">
+        <div className="flex flex-col lg:flex-row items-center gap-12">
+          <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="flex-1">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="h-1 w-8 bg-navy rounded-full" />
+              <span className="text-navy text-xs font-bold tracking-widest uppercase">About</span>
+            </div>
+            <h2 className="font-jp text-2xl md:text-3xl font-black text-navy leading-snug mb-4">
+              ご自宅の不用な{config.itemName}<br />
+              <span style={{ color: "#1a3a6b" }}>くらの助</span>が出張買取
+            </h2>
+            <p className="text-muted-foreground font-jp text-sm leading-relaxed mb-6">
+              「この{config.itemName}、売れるかな？」「状態が悪いけど価値はある？」<br />
+              そんなお品物も、くらの助がご自宅までお伺いします。
+            </p>
+            <div className="grid grid-cols-2 gap-3 mb-8">
+              {aboutPoints.map((p) => (
+                <div key={p} className="flex items-center gap-2">
+                  <div className="w-5 h-5 rounded-full bg-navy flex items-center justify-center flex-shrink-0">
+                    <Check className="w-3 h-3 text-white" />
+                  </div>
+                  <span className="font-jp text-sm font-bold text-navy">{p}</span>
+                </div>
+              ))}
+            </div>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Button className="h-12 px-6 bg-red-500 hover:bg-red-600 text-white font-jp font-bold rounded" onClick={scrollToContact}>
+                <Phone className="w-4 h-4 mr-2" />電話で無料査定　0120-XXX-XXX
+              </Button>
+              <Button variant="outline" className="h-12 px-6 border-navy text-navy hover:bg-navy hover:text-white font-jp font-bold rounded" onClick={scrollToContact}>
+                <Mail className="w-4 h-4 mr-2" />メールで相談する
+              </Button>
+            </div>
+          </motion.div>
+          <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="flex-1 w-full">
+            <div className="relative rounded-xl overflow-hidden shadow-xl">
+              <img src={config.aboutImage || "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&q=85"} alt="スタッフ" className="w-full h-72 md:h-96 object-cover" />
+              <div className="absolute top-4 right-4 bg-navy text-white rounded-lg px-4 py-3 text-center shadow-lg">
+                <p className="font-jp text-xs font-bold">出張費・査定料</p>
+                <p className="font-jp text-lg font-black">完全無料!!!</p>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>
@@ -178,7 +234,7 @@ function ConditionSection({ config }) {
 /* ── Reasons ── */
 function ReasonsSection({ config }) {
   return (
-    <section className="py-20 px-6 bg-background" id="reasons">
+    <section className="py-20 px-6 bg-muted" id="reasons">
       <div className="max-w-6xl mx-auto">
         <SectionHeader en="Why Choose Us" ja={<>{config.brandName}が<span className="text-navy">選ばれる5つの理由</span></>} />
         <div className="space-y-6">
@@ -218,7 +274,7 @@ function ProcessSection() {
           {processSteps.map((step, i) => (
             <motion.div key={step.num} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }} className="relative">
               {i < processSteps.length - 1 && <div className="hidden md:block absolute top-16 left-[85%] text-navy text-2xl z-10 font-black">›</div>}
-              <div className="bg-background rounded-xl overflow-hidden shadow-sm border border-border">
+              <div className="bg-muted rounded-xl overflow-hidden shadow-sm border border-border">
                 <img src={step.image} alt={step.title} className="w-full h-36 object-cover" />
                 <div className="p-5">
                   <div className="flex items-center gap-2 mb-2">
@@ -251,12 +307,7 @@ function BrandCard({ brand, i }) {
       className="item-card bg-white rounded-xl border border-border flex flex-col items-center justify-center gap-2 p-3 shadow-sm aspect-square"
     >
       {logo && !imgError ? (
-        <img
-          src={logo}
-          alt={name}
-          className="w-full h-12 object-contain"
-          onError={() => setImgError(true)}
-        />
+        <img src={logo} alt={name} className="w-full h-12 object-contain" onError={() => setImgError(true)} />
       ) : (
         <span className="font-jp text-xs font-bold text-navy text-center leading-tight px-1">{name}</span>
       )}
@@ -266,7 +317,7 @@ function BrandCard({ brand, i }) {
 
 function BrandsSection({ config }) {
   return (
-    <section className="py-20 px-6 bg-background">
+    <section className="py-20 px-6 bg-muted">
       <div className="max-w-6xl mx-auto">
         <SectionHeader en="Brands" ja={<>取り扱い<span className="text-navy">メーカー</span>・ブランド</>} sub="掲載のないブランドも査定可能です。お気軽にご相談ください。" />
         <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-8 gap-3">
@@ -369,7 +420,7 @@ function CTASection({ config }) {
 }
 
 /* ── Footer ── */
-function FooterSection({ config }) {
+function FooterSection() {
   return (
     <footer style={{ background: "#111", color: "#ccc", padding: "40px 6%", textAlign: "center" }}>
       <p className="font-bold text-white text-lg mb-4">買取 くらの助</p>
@@ -441,6 +492,7 @@ export default function CategoryLP({ config }) {
       <TopNav config={config} />
       <div className="pt-16">
         <Hero config={config} />
+        <AboutSection config={config} />
         <PriceGallery config={config} />
         <ConditionSection config={config} />
         <ReasonsSection config={config} />
@@ -448,7 +500,7 @@ export default function CategoryLP({ config }) {
         <BrandsSection config={config} />
         <Testimonials config={config} />
         <CTASection config={config} />
-        <FooterSection config={config} />
+        <FooterSection />
       </div>
       <StickyBar />
     </div>
