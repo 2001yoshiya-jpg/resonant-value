@@ -175,9 +175,9 @@ function AboutSection({ config }) {
 const fmt = (n) => new Intl.NumberFormat("ja-JP").format(n);
 function PriceGallery({ config }) {
   return (
-    <section className="py-20 px-6 bg-background" id="items">
+    <section className="py-20 px-6 bg-muted" id="items">
       <div className="max-w-7xl mx-auto">
-        <SectionHeader en="Recent Valuations" ja={<>相場買取価格よりも<br /><span className="text-navy">こんなに高く</span>買い取ります！</>} />
+        <SectionHeader en="Recent Valuations" ja={<>相場買取価格よりも<br /><span className="text-navy">こんなに高く</span>買い取ります！</>} sub="独自のルートで他社より高く買い取れる体制を整えています" />
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {config.items.map((item, i) => (
             <motion.div key={item.name} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.07 }} className="item-card bg-white rounded-xl overflow-hidden shadow-sm border border-border">
