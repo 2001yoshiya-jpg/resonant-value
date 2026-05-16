@@ -19,11 +19,11 @@ export default function WatchAbout() {
             </div>
             <h2 className="font-jp text-2xl md:text-3xl font-black text-navy leading-snug mb-4">
               ご自宅の不用な時計<br />
-              <span className="text-amber">時計買取センター</span>が出張買取
+              <span className="text-amber">くらの助</span>が出張買取
             </h2>
             <p className="text-muted-foreground font-jp text-sm leading-relaxed mb-6">
               「この時計、売れるかな？」「動かなくなったけど価値はある？」<br />
-              そんなお品物も、時計買取センターがご自宅までお伺いします。
+              そんなお品物も、くらの助がご自宅までお伺いします。
             </p>
             <div className="grid grid-cols-2 gap-3 mb-8">
               {points.map((p) => (
