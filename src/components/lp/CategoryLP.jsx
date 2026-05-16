@@ -15,8 +15,6 @@ function TopNav({ config }) {
   const [open, setOpen] = useState(false);
   const navLinks = [
     { href: "items", label: "買取品目" },
-    { href: "reasons", label: "選ばれる理由" },
-    { href: "flow", label: "買取の流れ" },
     { href: "contact", label: "無料査定" },
     { href: "about", label: "会社概要" },
   ];
@@ -495,10 +493,7 @@ export default function CategoryLP({ config }) {
         <AboutSection config={config} />
         <PriceGallery config={config} />
         <ConditionSection config={config} />
-        <ReasonsSection config={config} />
-        <ProcessSection />
         <BrandsSection config={config} />
-        <Testimonials config={config} />
         <CTASection config={config} />
         <FooterSection />
       </div>
