@@ -28,7 +28,7 @@ export default function WatchPriceGallery() {
             <motion.div key={item.name} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.07 }} className="item-card bg-white rounded-xl overflow-hidden shadow-sm border border-border">
               <div className="relative">
                 <img src={item.image} alt={item.name} className="w-full aspect-[4/3] object-cover" />
-                <div className="absolute top-2 right-2 bg-navy text-white text-xs font-black px-2 py-0.5 rounded">30%増額</div>
+
               </div>
               <div className="p-4">
                 <p className="font-jp text-xs font-semibold text-foreground leading-snug mb-3 line-clamp-2">{item.name}</p>
