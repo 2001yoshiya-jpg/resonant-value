@@ -1,82 +1,69 @@
 import { motion } from "framer-motion";
+import SectionHeader from "./SectionHeader";
 import { Phone, Truck, ClipboardCheck, Banknote } from "lucide-react";
 
 const steps = [
   {
+    num: "01",
     icon: Phone,
-    step: "01",
-    title: "お問い合わせ",
-    desc: "お電話・LINE・メールからお気軽にご連絡ください",
+    title: "無料査定申し込み",
+    desc: "まずは、「こんな物でも買い取ってもらえるか」など、なんでもお気軽にご相談ください。",
+    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=300&q=80",
   },
   {
+    num: "02",
     icon: Truck,
-    step: "02",
-    title: "出張訪問",
-    desc: "ご都合の良い日時にスタッフが無料でお伺いします",
-  },
-  {
-    icon: ClipboardCheck,
-    step: "03",
     title: "査定",
-    desc: "その場で丁寧に査定し、金額をご提示いたします",
+    desc: "ご希望に添えるよう、訪問日時の調整から決定。ご自宅に査定員が訪問し、お品物を慎重かつ丁寧に査定いたします。",
+    image: "https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?w=300&q=80",
   },
   {
+    num: "03",
+    icon: ClipboardCheck,
+    title: "査定結果のご案内",
+    desc: "確かな鑑定眼だけでなく、マナーを心得た査定員が丁寧に対応。ご安心ください。",
+    image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=300&q=80",
+  },
+  {
+    num: "04",
     icon: Banknote,
-    step: "04",
-    title: "即日現金払い",
-    desc: "ご納得いただければ、その場で現金をお支払いします",
+    title: "買い取り",
+    desc: "査定金額にご納得いただけましたら、その場で現金でお支払い。不成立でも手数料等は一切かかりません。",
+    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=300&q=80",
   },
 ];
 
-export default function ProcessSteps({ processImage }) {
+export default function ProcessSteps() {
   return (
-    <section className="py-24 px-6 relative overflow-hidden">
-      {/* Background image */}
-      <div className="absolute inset-0">
-        <img src={processImage} alt="Craftsmanship" className="w-full h-full object-cover opacity-10" />
-        <div className="absolute inset-0 bg-background/90" />
-      </div>
+    <section className="py-20 px-6 bg-white" id="flow">
+      <div className="max-w-6xl mx-auto">
+        <SectionHeader en="How It Works" ja={<>買取の<span className="text-amber">流れ</span></>} />
 
-      <div className="relative max-w-7xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <p className="font-mono text-xs tracking-[0.3em] text-primary uppercase mb-4">
-            How It Works
-          </p>
-          <h2 className="font-jp text-3xl md:text-4xl font-black text-foreground">
-            買取の<span className="text-primary">流れ</span>
-          </h2>
-          <div className="soundwave-divider w-32 mx-auto mt-8" />
-        </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {steps.map((item, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+          {steps.map((step, i) => (
             <motion.div
-              key={item.step}
-              initial={{ opacity: 0, y: 30 }}
+              key={step.num}
+              initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.12 }}
-              className="relative text-center"
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              className="relative"
             >
-              {/* Connector line */}
-              {index < steps.length - 1 && (
-                <div className="hidden md:block absolute top-10 left-[60%] w-[80%] h-px bg-gradient-to-r from-border to-transparent" />
+              {/* Connector arrow */}
+              {i < steps.length - 1 && (
+                <div className="hidden md:block absolute top-16 left-[85%] text-amber text-2xl z-10 font-black">›</div>
               )}
 
-              <div className="relative inline-flex flex-col items-center">
-                <span className="font-mono text-xs text-primary font-bold mb-3">{item.step}</span>
-                <div className="w-20 h-20 rounded-2xl bg-secondary flex items-center justify-center mb-5 border border-border">
-                  <item.icon className="w-8 h-8 text-primary" />
+              <div className="bg-muted rounded-xl overflow-hidden shadow-sm border border-border">
+                <img src={step.image} alt={step.title} className="w-full h-36 object-cover" />
+                <div className="p-5">
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-2xl font-black text-amber font-mono">{step.num}</span>
+                    <h3 className="font-jp text-sm font-black text-navy">{step.title}</h3>
+                  </div>
+                  <p className="font-jp text-xs text-muted-foreground leading-relaxed">{step.desc}</p>
                 </div>
               </div>
-              <h3 className="font-jp text-base font-bold text-foreground mb-2">{item.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed max-w-[200px] mx-auto">{item.desc}</p>
             </motion.div>
           ))}
         </div>
