@@ -113,7 +113,7 @@ function Hero({ config }) {
 const fmt = (n) => new Intl.NumberFormat("ja-JP").format(n);
 function PriceGallery({ config }) {
   return (
-    <section className="py-20 px-6 bg-muted" id="items">
+    <section className="py-20 px-6 bg-background" id="items">
       <div className="max-w-7xl mx-auto">
         <SectionHeader en="Recent Valuations" ja={<>相場買取価格よりも<br /><span className="text-navy">こんなに高く</span>買い取ります！</>} />
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -172,7 +172,7 @@ function ConditionSection({ config }) {
 /* ── Reasons ── */
 function ReasonsSection({ config }) {
   return (
-    <section className="py-20 px-6 bg-muted" id="reasons">
+    <section className="py-20 px-6 bg-background" id="reasons">
       <div className="max-w-6xl mx-auto">
         <SectionHeader en="Why Choose Us" ja={<>{config.brandName}が<span className="text-navy">選ばれる5つの理由</span></>} />
         <div className="space-y-6">
@@ -212,7 +212,7 @@ function ProcessSection() {
           {processSteps.map((step, i) => (
             <motion.div key={step.num} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }} className="relative">
               {i < processSteps.length - 1 && <div className="hidden md:block absolute top-16 left-[85%] text-navy text-2xl z-10 font-black">›</div>}
-              <div className="bg-muted rounded-xl overflow-hidden shadow-sm border border-border">
+              <div className="bg-background rounded-xl overflow-hidden shadow-sm border border-border">
                 <img src={step.image} alt={step.title} className="w-full h-36 object-cover" />
                 <div className="p-5">
                   <div className="flex items-center gap-2 mb-2">
@@ -260,7 +260,7 @@ function BrandCard({ brand, i }) {
 
 function BrandsSection({ config }) {
   return (
-    <section className="py-20 px-6 bg-muted">
+    <section className="py-20 px-6 bg-background">
       <div className="max-w-6xl mx-auto">
         <SectionHeader en="Brands" ja={<>取り扱い<span className="text-navy">メーカー</span>・ブランド</>} sub="掲載のないブランドも査定可能です。お気軽にご相談ください。" />
         <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-8 gap-3">
