@@ -30,21 +30,14 @@ export default function InstrumentPriceGallery() {
             >
               <div className="relative">
                 <img src={item.image} alt={item.name} className="w-full aspect-[4/3] object-cover" />
-                <div className="absolute top-2 right-2 bg-navy text-white text-xs font-black px-2 py-0.5 rounded">30%増額</div>
               </div>
               <div className="p-4">
                 <p className="font-jp text-xs font-semibold text-foreground leading-snug mb-3 line-clamp-2">
                   {item.name}
                 </p>
-                <div className="space-y-1">
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs text-muted-foreground font-jp">相場</span>
-                    <span className="text-xs text-muted-foreground line-through font-mono">¥{fmt(item.market)}</span>
-                  </div>
-                  <div className="flex items-center justify-between bg-navy/10 rounded px-2 py-1">
-                    <span className="text-xs text-navy font-jp font-bold">買取価格</span>
-                    <span className="text-sm font-black text-navy font-mono">¥{fmt(item.ours)}</span>
-                  </div>
+                <div className="flex items-center justify-between bg-navy/10 rounded px-2 py-1">
+                  <span className="text-xs text-navy font-jp font-bold">買取価格</span>
+                  <span className="text-sm font-black text-navy font-mono">¥{fmt(item.ours)}</span>
                 </div>
               </div>
             </motion.div>

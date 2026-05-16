@@ -32,15 +32,9 @@ export default function WatchPriceGallery() {
               </div>
               <div className="p-4">
                 <p className="font-jp text-xs font-semibold text-foreground leading-snug mb-3 line-clamp-2">{item.name}</p>
-                <div className="space-y-1">
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs text-muted-foreground font-jp">相場</span>
-                    <span className="text-xs text-muted-foreground line-through font-mono">¥{fmt(item.market)}</span>
-                  </div>
-                  <div className="flex items-center justify-between bg-navy/10 rounded px-2 py-1">
-                    <span className="text-xs text-navy font-jp font-bold">買取価格</span>
-                    <span className="text-sm font-black text-navy font-mono">¥{fmt(item.ours)}</span>
-                  </div>
+                <div className="flex items-center justify-between bg-navy/10 rounded px-2 py-1">
+                  <span className="text-xs text-navy font-jp font-bold">買取価格</span>
+                  <span className="text-sm font-black text-navy font-mono">¥{fmt(item.ours)}</span>
                 </div>
               </div>
             </motion.div>
