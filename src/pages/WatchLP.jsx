@@ -1,4 +1,4 @@
-import TopNav from "../components/lp/watch/WatchTopNav";
+import TopNav from "../components/lp/Header";
 import WatchHero from "../components/lp/watch/WatchHero";
 import WatchAbout from "../components/lp/watch/WatchAbout";
 import WatchPriceGallery from "../components/lp/watch/WatchPriceGallery";

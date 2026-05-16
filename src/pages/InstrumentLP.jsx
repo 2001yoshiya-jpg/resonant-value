@@ -1,4 +1,4 @@
-import TopNav from "../components/lp/instrument/InstrumentTopNav";
+import TopNav from "../components/lp/Header";
 import InstrumentHero from "../components/lp/instrument/InstrumentHero";
 import InstrumentAbout from "../components/lp/instrument/InstrumentAbout";
 import InstrumentPriceGallery from "../components/lp/instrument/InstrumentPriceGallery";
