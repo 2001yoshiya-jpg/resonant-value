@@ -1,6 +1,7 @@
 import TopNav from "../components/lp/TopNav";
 import HeroSection from "../components/lp/HeroSection";
 import AboutBand from "../components/lp/AboutBand";
+import ItemCategories from "../components/lp/ItemCategories";
 import PriceGallery from "../components/lp/PriceGallery";
 import ConditionSection from "../components/lp/ConditionSection";
 import ReasonsSection from "../components/lp/ReasonsSection";
@@ -16,17 +17,18 @@ export default function Home() {
     <div className="min-h-screen bg-background text-foreground font-jp">
       <TopNav />
       <div className="pt-16">
-        <HeroSection />
-        <AboutBand />
-        <PriceGallery />
-        <ConditionSection />
-        <ReasonsSection />
-        <ProcessSteps />
-        <BrandGrid />
-        <TestimonialsSection />
-        <CTASection />
-        <Footer />
-      </div>
+         <HeroSection />
+         <AboutBand />
+         <ItemCategories />
+         <PriceGallery />
+         <ConditionSection />
+         <ReasonsSection />
+         <ProcessSteps />
+         <BrandGrid />
+         <TestimonialsSection />
+         <CTASection />
+         <Footer />
+       </div>
       <StickyBottomBar />
     </div>
   );
