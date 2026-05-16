@@ -438,7 +438,15 @@ function SectionHeader({ en, ja, sub }) {
 /* ── Main Export ── */
 export default function CategoryLP({ config }) {
   return (
-    <div className="min-h-screen bg-background text-foreground font-jp">
+    <div className="min-h-screen text-foreground font-jp" style={{
+      background: `
+        linear-gradient(45deg, transparent 48%, rgba(255,255,255,0.08) 50%, transparent 52%),
+        linear-gradient(-45deg, transparent 48%, rgba(255,255,255,0.08) 50%, transparent 52%),
+        linear-gradient(to bottom, #001a3d, #002654)`,
+      backgroundSize: '80px 80px, 80px 80px, 100% 100%',
+      backgroundPosition: '0 0, 0 0, 0 0',
+      backgroundAttachment: 'fixed'
+    }}>
       <TopNav config={config} />
       <div className="pt-16">
         <Hero config={config} />
