@@ -146,14 +146,7 @@ function PriceGallery({ config }) {
 /* ── Condition ── */
 function ConditionSection({ config }) {
   return (
-    <section className="py-20 px-6" style={{
-      background: `
-        linear-gradient(45deg, transparent 48%, rgba(200,200,220,0.2) 50%, transparent 52%),
-        linear-gradient(-45deg, transparent 48%, rgba(200,200,220,0.2) 50%, transparent 52%),
-        linear-gradient(45deg, #dde0ed 0%, #e8e6f0 50%, #f0eded 100%)`,
-      backgroundSize: '80px 80px, 80px 80px, 100% 100%',
-      backgroundPosition: '0 0, 0 0, 0 0'
-    }}>
+    <section className="py-20 px-6" style={{ background: 'transparent' }}>
       <div className="max-w-6xl mx-auto">
         <SectionHeader en="Any Condition" ja={<>こんな状態のお品物でも<br /><span className="text-navy">出張買取</span>いたします</>} />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
