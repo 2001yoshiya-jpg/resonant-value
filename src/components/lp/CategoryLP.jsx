@@ -439,12 +439,9 @@ function SectionHeader({ en, ja, sub }) {
 export default function CategoryLP({ config }) {
   return (
     <div className="min-h-screen text-foreground font-jp" style={{
-      background: `
-        linear-gradient(45deg, transparent 48%, rgba(255,255,255,0.08) 50%, transparent 52%),
-        linear-gradient(-45deg, transparent 48%, rgba(255,255,255,0.08) 50%, transparent 52%),
-        linear-gradient(to bottom, #001a3d, #002654)`,
-      backgroundSize: '80px 80px, 80px 80px, 100% 100%',
-      backgroundPosition: '0 0, 0 0, 0 0',
+      backgroundImage: `linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)), url('https://media.base44.com/images/public/6a07fe0d9aa87ec73e08277b/811c6eb60_image.png')`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
       backgroundAttachment: 'fixed'
     }}>
       <TopNav config={config} />
