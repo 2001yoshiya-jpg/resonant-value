@@ -22,7 +22,7 @@ export default function ItemCategories() {
     <section className="py-20 px-6 bg-muted" id="items">
       <div className="max-w-7xl mx-auto">
         <SectionHeader en="Items" ja={<>買取<span className="text-navy">品目</span></>} sub="「箱なし」「古い」「壊れている」お品物も査定可能です" />
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           {categories.map((item, i) => (
             <motion.div
               key={item.name}
