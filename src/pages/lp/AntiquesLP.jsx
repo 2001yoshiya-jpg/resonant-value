@@ -37,11 +37,9 @@ const config = {
     { num: "05", title: "丁寧・誠実な接客", desc: "大切なお品物を一点ずつ確認し、分かりやすくご説明します。", image: "https://images.unsplash.com/photo-1524508762098-f9e1dbef2b57?w=300&q=80" },
   ],
   brands: [
-    { name: "伊万里焼", logo: null }, { name: "有田焼", logo: null }, { name: "九谷焼", logo: null },
-    { name: "萩焼", logo: null }, { name: "備前焼", logo: null }, { name: "信楽焼", logo: null },
-    { name: "清水焼", logo: null }, { name: "掛け軸", logo: null }, { name: "浮世絵", logo: null },
-    { name: "茶道具", logo: null }, { name: "日本刀", logo: null }, { name: "根付", logo: null },
-    { name: "印籠", logo: null }, { name: "仏像", logo: null }, { name: "古銭", logo: null }, { name: "古地図", logo: null },
+    "伊万里焼", "有田焼", "九谷焼", "萩焼", "備前焼", "信楽焼",
+    "清水焼", "掛け軸", "浮世絵", "茶道具", "日本刀", "根付",
+    "印籠", "仏像", "古銭", "古地図",
   ],
   testimonials: [
     { category: "伊万里焼", location: "東京都", text: "遺品整理で出てきた骨董品を売りました。価値が分からなかったのですが、丁寧に説明してもらいました。", age: "60代・男性", image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=200&q=80" },

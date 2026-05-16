@@ -37,11 +37,9 @@ const config = {
     { num: "05", title: "丁寧・誠実な接客", desc: "大切なコレクションを一点ずつ確認し、分かりやすくご説明します。", image: "https://images.unsplash.com/photo-1524508762098-f9e1dbef2b57?w=300&q=80" },
   ],
   brands: [
-    { name: "見返り美人", logo: null }, { name: "月に雁", logo: null }, { name: "記念切手", logo: null },
-    { name: "普通切手", logo: null }, { name: "外国切手", logo: null }, { name: "初日カバー", logo: null },
-    { name: "寛永通宝", logo: null }, { name: "明治通宝", logo: null }, { name: "大正通宝", logo: null },
-    { name: "昭和コイン", logo: null }, { name: "オリンピック記念", logo: null }, { name: "金貨", logo: null },
-    { name: "銀貨", logo: null }, { name: "古紙幣", logo: null }, { name: "外国コイン", logo: null }, { name: "エラーコイン", logo: null },
+    "見返り美人", "月に雁", "記念切手", "普通切手", "外国切手", "初日カバー",
+    "寛永通宝", "明治通宝", "大正通宝", "昭和コイン", "オリンピック記念", "金貨",
+    "銀貨", "古紙幣", "外国コイン", "エラーコイン",
   ],
   testimonials: [
     { category: "見返り美人切手", location: "東京都", text: "祖父のコレクションを売りました。価値が分からなかったのですが、専門家に丁寧に説明してもらいました。", age: "60代・男性", image: "https://images.unsplash.com/photo-1579208570378-8c970854bc23?w=200&q=80" },

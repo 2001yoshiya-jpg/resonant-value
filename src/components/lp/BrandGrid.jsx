@@ -3,26 +3,27 @@ import { motion } from "framer-motion";
 import SectionHeader from "./SectionHeader";
 
 const brands = [
-  { name: "YAMAHA", logo: "https://logo.clearbit.com/yamaha.com" },
-  { name: "KAWAI", logo: "https://logo.clearbit.com/kawai.co.jp" },
-  { name: "Gibson", logo: "https://logo.clearbit.com/gibson.com" },
-  { name: "Fender", logo: "https://logo.clearbit.com/fender.com" },
-  { name: "Martin", logo: "https://logo.clearbit.com/martinguitar.com" },
-  { name: "Roland", logo: "https://logo.clearbit.com/roland.com" },
-  { name: "SELMER", logo: "https://logo.clearbit.com/selmer.fr" },
-  { name: "Pearl", logo: "https://logo.clearbit.com/pearldrum.com" },
-  { name: "Ibanez", logo: "https://logo.clearbit.com/ibanez.com" },
-  { name: "Ovation", logo: null },
-  { name: "Morris", logo: null },
-  { name: "Yanagisawa", logo: null },
-  { name: "Muramatsu", logo: null },
-  { name: "BUFFET CRAMPON", logo: "https://logo.clearbit.com/buffet-crampon.com" },
-  { name: "SUZUKI", logo: "https://logo.clearbit.com/suzuki-music.co.jp" },
-  { name: "Taylor", logo: "https://logo.clearbit.com/taylorguitars.com" },
+  { name: "YAMAHA", domain: "yamaha.com" },
+  { name: "KAWAI", domain: "kawai.co.jp" },
+  { name: "Gibson", domain: "gibson.com" },
+  { name: "Fender", domain: "fender.com" },
+  { name: "Martin", domain: "martinguitar.com" },
+  { name: "Roland", domain: "roland.com" },
+  { name: "SELMER", domain: "selmer.fr" },
+  { name: "Pearl", domain: "pearldrum.com" },
+  { name: "Ibanez", domain: "ibanez.com" },
+  { name: "Ovation", domain: "ovationguitars.com" },
+  { name: "Morris", domain: "morris-guitar.com" },
+  { name: "Yanagisawa", domain: "yanagisawasax.com" },
+  { name: "Muramatsu", domain: "muramatsuflute.com" },
+  { name: "BUFFET CRAMPON", domain: "buffet-crampon.com" },
+  { name: "SUZUKI", domain: "suzuki-music.co.jp" },
+  { name: "Taylor", domain: "taylorguitars.com" },
 ];
 
 function BrandCard({ brand, i }) {
   const [imgError, setImgError] = useState(false);
+  const logoUrl = brand.domain ? `https://www.google.com/s2/favicons?domain=${brand.domain}&sz=64` : null;
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.9 }}
@@ -31,14 +32,9 @@ function BrandCard({ brand, i }) {
       transition={{ duration: 0.3, delay: i * 0.03 }}
       className="item-card bg-white rounded-xl border border-border h-20 flex flex-col items-center justify-center px-2 py-2 shadow-sm gap-1"
     >
-      {brand.logo && !imgError ? (
+      {logoUrl && !imgError ? (
         <>
-          <img
-            src={brand.logo}
-            alt={brand.name}
-            className="h-7 w-auto max-w-full object-contain"
-            onError={() => setImgError(true)}
-          />
+          <img src={logoUrl} alt={brand.name} className="h-8 w-8 object-contain" onError={() => setImgError(true)} />
           <span className="font-jp text-[10px] text-muted-foreground text-center leading-tight">{brand.name}</span>
         </>
       ) : (

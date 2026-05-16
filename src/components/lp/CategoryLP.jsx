@@ -248,9 +248,9 @@ function ProcessSection() {
 /* ── Brands ── */
 function BrandCard({ brand, i }) {
   const [imgError, setImgError] = useState(false);
-  // brand can be a string or { name, logo } object
   const name = typeof brand === "string" ? brand : brand.name;
-  const logoUrl = typeof brand === "object" && brand.logo ? brand.logo : null;
+  const domain = typeof brand === "object" && brand.domain ? brand.domain : null;
+  const logoUrl = domain ? `https://www.google.com/s2/favicons?domain=${domain}&sz=64` : null;
 
   return (
     <motion.div
@@ -265,7 +265,7 @@ function BrandCard({ brand, i }) {
           <img
             src={logoUrl}
             alt={name}
-            className="h-7 w-auto max-w-full object-contain"
+            className="h-8 w-8 object-contain"
             onError={() => setImgError(true)}
           />
           <span className="font-jp text-[10px] text-muted-foreground text-center leading-tight">{name}</span>

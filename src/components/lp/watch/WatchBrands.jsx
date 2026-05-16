@@ -3,26 +3,27 @@ import { motion } from "framer-motion";
 import SectionHeader from "../SectionHeader";
 
 const brands = [
-  { name: "ROLEX", logo: "https://logo.clearbit.com/rolex.com" },
-  { name: "PATEK PHILIPPE", logo: "https://logo.clearbit.com/patek.com" },
-  { name: "AUDEMARS PIGUET", logo: "https://logo.clearbit.com/audemarspiguet.com" },
-  { name: "VACHERON", logo: "https://logo.clearbit.com/vacheron-constantin.com" },
-  { name: "OMEGA", logo: "https://logo.clearbit.com/omegawatches.com" },
-  { name: "IWC", logo: "https://logo.clearbit.com/iwc.com" },
-  { name: "CARTIER", logo: "https://logo.clearbit.com/cartier.com" },
-  { name: "BREITLING", logo: "https://logo.clearbit.com/breitling.com" },
-  { name: "TAG HEUER", logo: "https://logo.clearbit.com/tagheuer.com" },
-  { name: "PANERAI", logo: "https://logo.clearbit.com/panerai.com" },
-  { name: "LONGINES", logo: "https://logo.clearbit.com/longines.com" },
-  { name: "TUDOR", logo: "https://logo.clearbit.com/tudorwatch.com" },
-  { name: "GRAND SEIKO", logo: "https://logo.clearbit.com/grand-seiko.com" },
-  { name: "CITIZEN", logo: "https://logo.clearbit.com/citizen.co.jp" },
-  { name: "CASIO", logo: "https://logo.clearbit.com/casio.com" },
-  { name: "SEIKO", logo: "https://logo.clearbit.com/seiko.com" },
+  { name: "ROLEX", domain: "rolex.com" },
+  { name: "PATEK PHILIPPE", domain: "patek.com" },
+  { name: "AUDEMARS PIGUET", domain: "audemarspiguet.com" },
+  { name: "VACHERON CONSTANTIN", domain: "vacheron-constantin.com" },
+  { name: "OMEGA", domain: "omegawatches.com" },
+  { name: "IWC", domain: "iwc.com" },
+  { name: "CARTIER", domain: "cartier.com" },
+  { name: "BREITLING", domain: "breitling.com" },
+  { name: "TAG HEUER", domain: "tagheuer.com" },
+  { name: "PANERAI", domain: "panerai.com" },
+  { name: "LONGINES", domain: "longines.com" },
+  { name: "TUDOR", domain: "tudorwatch.com" },
+  { name: "GRAND SEIKO", domain: "grand-seiko.com" },
+  { name: "CITIZEN", domain: "citizen.co.jp" },
+  { name: "CASIO", domain: "casio.com" },
+  { name: "SEIKO", domain: "seiko.com" },
 ];
 
 function BrandCard({ brand, i }) {
   const [imgError, setImgError] = useState(false);
+  const logoUrl = brand.domain ? `https://www.google.com/s2/favicons?domain=${brand.domain}&sz=64` : null;
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.9 }}
@@ -31,14 +32,9 @@ function BrandCard({ brand, i }) {
       transition={{ duration: 0.3, delay: i * 0.03 }}
       className="item-card bg-white rounded-xl border border-border h-20 flex flex-col items-center justify-center px-2 py-2 shadow-sm gap-1"
     >
-      {brand.logo && !imgError ? (
+      {logoUrl && !imgError ? (
         <>
-          <img
-            src={brand.logo}
-            alt={brand.name}
-            className="h-7 w-auto max-w-full object-contain"
-            onError={() => setImgError(true)}
-          />
+          <img src={logoUrl} alt={brand.name} className="h-8 w-8 object-contain" onError={() => setImgError(true)} />
           <span className="font-jp text-[10px] text-muted-foreground text-center leading-tight">{brand.name}</span>
         </>
       ) : (
