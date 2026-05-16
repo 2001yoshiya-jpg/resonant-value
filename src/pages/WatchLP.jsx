@@ -3,7 +3,6 @@ import WatchHero from "../components/lp/watch/WatchHero";
 import WatchAbout from "../components/lp/watch/WatchAbout";
 import WatchPriceGallery from "../components/lp/watch/WatchPriceGallery";
 import WatchCondition from "../components/lp/watch/WatchCondition";
-import WatchReasons from "../components/lp/watch/WatchReasons";
 import WatchProcess from "../components/lp/watch/WatchProcess";
 import WatchBrands from "../components/lp/watch/WatchBrands";
 import WatchTestimonials from "../components/lp/watch/WatchTestimonials";
@@ -20,7 +19,6 @@ export default function WatchLP() {
         <WatchAbout />
         <WatchPriceGallery />
         <WatchCondition />
-        <WatchReasons />
         <WatchProcess />
         <WatchBrands />
         <WatchTestimonials />

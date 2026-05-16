@@ -445,7 +445,6 @@ export default function CategoryLP({ config }) {
         <Hero config={config} />
         <PriceGallery config={config} />
         <ConditionSection config={config} />
-        <ReasonsSection config={config} />
         <ProcessSection />
         <BrandsSection config={config} />
         <Testimonials config={config} />
