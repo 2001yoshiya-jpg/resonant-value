@@ -7,7 +7,6 @@ import { AuthProvider, useAuth } from '@/lib/AuthContext';
 import UserNotRegisteredError from '@/components/UserNotRegisteredError';
 import Home from './pages/Home';
 import WatchLP from './pages/WatchLP';
-import Dashboard from './pages/Dashboard';
 import BrandLP from './pages/lp/BrandLP';
 import GoldLP from './pages/lp/GoldLP';
 import JewelryLP from './pages/lp/JewelryLP';
@@ -49,7 +48,6 @@ const AuthenticatedApp = () => {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/watch" element={<WatchLP />} />
-      <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/brand" element={<BrandLP />} />
       <Route path="/gold" element={<GoldLP />} />
       <Route path="/jewelry" element={<JewelryLP />} />
