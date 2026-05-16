@@ -431,7 +431,7 @@ function SectionHeader({ en, ja, sub }) {
 /* ── Main Export ── */
 export default function CategoryLP({ config }) {
   return (
-    <div className="min-h-screen text-foreground font-jp" style={{ background: "linear-gradient(180deg, #e8e6f0 0%, #f0eded 100%)" }}>
+    <div className="min-h-screen bg-background text-foreground font-jp">
       <TopNav config={config} />
       <div className="pt-16">
         <Hero config={config} />
