@@ -18,7 +18,7 @@ import StampsLP from './pages/lp/StampsLP';
 import SakeLP from './pages/lp/SakeLP';
 import DishesLP from './pages/lp/DishesLP';
 import FurnitureLP from './pages/lp/FurnitureLP';
-import InstrumentLP from './pages/lp/InstrumentLP';
+import InstrumentLP from './pages/InstrumentLP';
 // Add page imports here
 
 const AuthenticatedApp = () => {
