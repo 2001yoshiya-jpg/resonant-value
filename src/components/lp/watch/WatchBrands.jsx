@@ -49,7 +49,7 @@ export default function WatchBrands() {
   return (
     <section className="py-20 px-6 bg-muted">
       <div className="max-w-6xl mx-auto">
-        <SectionHeader en="Brands" ja={<>取り扱い<span className="text-amber">メーカー</span>・ブランド</>} sub="掲載のないブランドも査定可能です。お気軽にご相談ください。" />
+        <SectionHeader en="Brands" ja={<>取り扱い<span className="text-navy">メーカー</span>・ブランド</>} sub="掲載のないブランドも査定可能です。お気軽にご相談ください。" />
         <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-8 gap-3">
           {brands.map((brand, i) => (
             <BrandCard key={brand.name} brand={brand} i={i} />
